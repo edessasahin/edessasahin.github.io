@@ -2,77 +2,227 @@
 <html>
 
 <head>
-    <!DOCTYPE html>
-    <html>
+    <meta charset:"utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-family: Tahoma, Geneva, sans-serif;
+    }
 
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="styles/main.css">
-    </head>
+    h1 {
+        font-size: 40px;
+        color: rgb(240, 239, 191);
+    }
+
+    p,
+    g {
+        font-size: 30px;
+    }
+
+    h2,
+    h3,
+    h4 {
+        font-size: 40px;
+    }
+
+    .video {
+        text-align: center;
+    }
+
+    .sidebar {
+        height: 100%;
+        width: 160px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        padding-top: 16px;
+    }
+
+    .sidebar a {
+        padding: 10px 10px 10px 10px;
+        text-decoration: none;
+        font-size: 27px;
+        color: #818181;
+        display: block;
+    }
+
+    .sidebar a:hover {
+        color: #f1f1f1;
+    }
+
+    .main {
+        margin-left: 160px;
+        /* Same as the width of the sidenav */
+        padding: 0px 10px;
+    }
+
+    @media screen and (max-height: 450px) {
+        .sidebar {
+            padding-top: 15px;
+        }
+
+        .sidebar a {
+            font-size: 18px;
+        }
+    }
+
+    b{
+        color:burlywood;
+        font-style: italic;
+        font-weight: lighter;
+        font-size: 40px;
+        text-align: center;
+
+    }
+</style>
 
 <body {text-align}>
-    <!--content!-->
-    <img src="images/background.png" alt="resized image" title="resized image seems to fit the page better" height="173"
-        width="170">
-    <h1>
-        <strong>
-            Brainstorm Buddy
-        </strong>
-    </h1>
-    <div class="code">
-        <p>
-            Welcome to the start line of your imagination's journey!
-        </p>
+    <!-- Header/Home -->
+
+    <div class="sidebar">
+        <a href="#home"><i class="fa fa-fw fa-home"></i> Home</a>
+        <a href="#about"><i class="fa fa-fw fa-book"></i> About</a>
+        <a href="#contact"><i class="fa fa-fw fa-user"></i> Contact</a>
+
     </div>
 
-</body>
+    <div class="main" id="main">
+        <header class="home" id="home">
 
-</html>
 
-<head>
-    <title>Save Web Form Data to Spreadsheets - Contact Form</title>
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.js"
-      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-      crossorigin="anonymous"></script>
-    <script>
-    function SubForm (){
-        $.ajax({
-            url:'https://api.apispreadsheets.com/data/736/',
-            type:'post',
-            data:$("#myForm").serializeArray(),
-            success: function(){
-              alert("Form Data Submitted :)")
-            },
-            error: function(){
-              alert("There was an error :(")
-            }
-        });
-    }
-    </script>
-    </head>
-    <body>
-      <form id="myForm">
-        <label>Full Name</label>
-        <br/>
-        <input name="full_name" />
-        <br/>
-        <label>Email</label>
-        <br/>
-        <input name="email" />
-        <br/>
-        <label>Age</label>
-        <br/>
-        <input type="radio" id="age" name="age" value="18-35" /> 18-35<br/>
-        <input type="radio" id="age" name="age" value="35+" /> 35+<br/>
-        <br/>
-        <label>Message</label>
-        <br/>
-        <textarea name="message">
-        </textarea>
-        <br/>
-        <br/>
-      </form>
-      <button onclick="SubForm()">Submit</button>
-    </body>
-    </html>
+
+            <img src="images/logo.PNG" alt="logo" class="image" width="800" height="400">
+            <h1>
+                <strong>
+                    Unleash your imagination!
+                </strong>
+            </h1>
+        </header>
+
+        <!--Home Section-->
+        <div class="home" id="home">
+            <h2>
+                Escape your comfort zone...
+            </h2>
+            <p>
+                They say that focusing all of your energy into one particular thing is the key to success.
+                Are you having trouble finding the perfect topic to write about, but don’t want to share your ideas
+                prematurely?
+                
+                Let your reliable Brainstorm Buddy help boost your imagination to the fullest!
+                Get ready to put your imagination to the ultimate test!
+                
+                Escape your comfort zone by trying to complete tasks that you would have never thought of before.
+            </p>
+        </div>
+
+        <!--Video Presentation-->
+        <div class="video" id="video">
+            <iframe width="480" height="270" src="https://www.powtoon.com/embed/f4yr1lKD93u/" frameborder="0"
+                allowfullscreen></iframe>
+        </div>
+
+        <!--About Section-->
+        <div class="about" id="about">
+            <h4>
+                About us...
+            </h4>
+            <p>
+                The Brainstorm Buddy's purpose is to stimulate your imagination by encouraging you to escape your
+                comfort zone.
+                "How would it do that?" you might ask... Well, the answer to this question is up to you.
+                Depending on your availability, Brainstorm Buddy provides a series of intelectual or physical random
+                tasks and questions.
+                By completing them, you will find yourself discovering new things and, by default, connecting with
+                yourself and your surroundings more.
+                Brainstorm Buddy is an excellent tool for people who are stuck in a writer's block or are having trouble
+                procrastinating.
+
+                <p></p>
+            </p>
+
+                <b>
+                    "You can't wait for inspiration, you have to go after it with a club!" -Jack London, author of "Love of Life and other Stories" and "Martin Eden"
+                </b>
+
+                <p></p>
+                
+
+            
+            <p>
+                Here you will also be able to create an profile and join our comunity, where you can share your work and
+                get feedback on it.
+                You may benefit from experts' opinions and advice as well, in change of a monthly recurring subscription
+                of 1.99$.
+                So what are you waiting for?
+            </p>
+            <p>
+                The Brainstorm Buddy app will be available for iOS devices, as well as Android and Windows phones.
+                Subscribe below to get notified when downloading is available!
+            </p>
+        </div>
+
+        <!--Contact Section-->
+        <div class="contact" id="contact">
+            <h3>
+                Contact us!
+            </h3>
+            <div class="info" id="info">
+                <p>
+                    <i class="fa fa-map-marker"></i>
+                    Bucharest, RO
+                </p>
+                <p>
+                    <i class="fa fa-phone"></i>
+                    Phone: +400736247708
+                </p>
+                <p>
+                    <i class="fa fa-folder-open"></i>
+                    Email: bbuddy@contact.com
+                </p>
+            </div>
+            <p></p>
+            <p>
+                Feel free to send us a message:
+            </p>
+            <!-- When the input field gets focus, replace its current value with an empty string -->
+            <p>
+                <input class="subject bar" type="text" placeholder="Subject" required name="Subject">
+            </p>
+            <input style="height:200px; width:500px" type="text"
+                placeholder="Give us your feedback, suggestions, questions or any kinds of thoughts..." required
+                name="Message">
+            <p>
+                <button class="send" type="send">
+                    <i clsss="send">Send</i>
+                </button>
+            </p>
+            <p>
+                Sign up for updates regarding changes and special offers:
+
+            </p>
+            <form action="/action_page.php" target="_blank">
+                <p>
+                    <input style="height:75px; width:250px" input class="name bar" type="text" placeholder="Name" required name="Name">
+                </p>
+                <p>
+                    <input style="height:75px; width:250px" input class="email bar" type="text" placeholder="Email" required name="Email">
+                </p>
+
+                <p>
+                    <button class="submit" type="submit">
+                        <i class="fa fa-paper-plane">Subscribe</i>
+                    </button>
+                </p>
+            </form>
+            <!-- End Contact Section -->
+        </div>
